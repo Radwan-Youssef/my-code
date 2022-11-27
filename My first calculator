@@ -1,0 +1,126 @@
+def sci_calc():
+    
+    print("Please enter the first value.")
+    value1 = int(input())
+    print("Please enter one of the following: '+' '-' '/' '*' '%'")
+    sign1 = input()
+    print("Please enter the second value.")
+    value2 = int(input())
+
+    print("Please enter one of the following: '+' '-' '/' '*' '%' if you would like to recive the result type 'n' ")
+    sign2 = input()
+    if(sign2 == 'n'):
+        if(sign1 == '+'):
+            finalres = value1 + value2
+            print("Would you like to do another calculation? Y/N")
+            y_n = input()
+            if(y_n == "N"):
+                print(finalres)
+                input("Press any button to exit")
+                return None
+            if(y_n == "Y"):
+                calc()
+        elif(sign1 == '-'):
+            finalres = value1 - value2
+            print("Would you like to do another calculation? Y/N")
+            y_n = input()
+            if(y_n == "N"):
+                print(finalres)
+                input("Press any button to exit")
+                return None
+            if(y_n == "Y"):
+                calc()
+        elif(sign1 == '/'):
+            finalres = value1 / value2
+            print("Would you like to do another calculation? Y/N")
+            y_n = input()
+            if(y_n == "N"):
+                print(finalres)
+                input("Press any button to exit")
+                return None
+            if(y_n == "Y"):
+                calc()
+        elif(sign1 == '*'):
+            finalres = value1 * value2
+            print("Would you like to do another calculation? Y/N")
+            y_n = input()
+            if(y_n == "N"):
+                print(finalres)
+                input("Press any button to exit")
+                return None
+            if(y_n == "Y"):
+                calc()
+        elif(sign1 == '%'):
+            finalres = value1 % value2
+            print("Would you like to do another calculation? Y/N")
+            y_n = input()
+            if(y_n == "N"):
+                print(finalres)
+                input("Press any button to exit")
+                return None
+            if(y_n == "Y"):
+                calc()
+            else:
+                print("Invalid Operation")
+                return None
+            
+    else:
+        if(sign1 == '+'):
+            finalres = value1 + value2
+        elif(sign1 == '-'):
+            finalres = value1 - value2
+        elif(sign1 == '/'):
+            finalres = value1 / value2
+        elif(sign1 == '*'):
+            finalres = value1 * value2
+        elif(sign1 == '%'):
+            finalres = value1 % value2
+        else:
+            print("Invalid Operation")
+            return None
+
+        print("Please enter the third value.")
+        value3 = int(input())
+        if(sign2 == '+'):
+            finalres = finalres + value3
+        elif(sign2 == '-'):
+            finalres = finalres - value3
+        elif(sign2 == '/'):
+            finalres = finalres / value3
+        elif(sign2 == '*'):
+            finalres = finalres * value3
+        elif(sign2 == '%'):
+            finalres = finalres % value3
+        else:
+            print("Invalid Operation")
+            return None
+
+
+        addvalue = True
+
+        while(addvalue):
+            print("Please enter one of the following: '+' '-' '/' '*' '%' if you would like to recive the result type 'n' ")
+            sign3 = input()
+            if(sign3 == 'n'):
+                addvalue = False
+            else:
+                print("Please enter the fourth value.")
+                value4 = int(input())
+                if(sign3 == '+'):
+                    finalres = finalres + value4
+                elif(sign3 == '-'):
+                    finalres = finalres - value4
+                elif(sign3 == '/'):
+                    finalres = finalres / value4
+                elif(sign3 == '*'):
+                    finalres = finalres * value4
+                elif(sign3 == '%'):
+                    finalres = finalres % value4
+                else:
+                    print("Invalid Operation")
+                    return None
+    print(finalres)
+    input("Press any button to exit")
+    return None
+
+sci_calc()
