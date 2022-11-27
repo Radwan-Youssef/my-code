@@ -1,0 +1,32 @@
+import turtle
+malak = turtle.Turtle()
+malak.color("red")
+malak.pensize(5)
+c = 12
+f = c
+malak.left(45)
+malak.forward(75)
+for i in range(10):   
+    malak.left(5)
+    malak.forward(10)
+
+a = c - 1
+for l in range(c):
+    malak.forward(10)
+    malak.left(a)
+    
+malak.right(90)
+
+f = c - 1
+for g in range(c):
+    malak.forward(10)
+    malak.left(f)  
+
+for m in range(10):   
+    malak.left(5)
+    malak.forward(12)
+
+malak.right(3)
+malak.forward(75)
+
+input()
